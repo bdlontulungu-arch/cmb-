@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>LOBOKO</title>
+
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: #ffffff;
+}
+
+
+.header2 {
+background: #2d55a0;
+color: rgb(255, 252, 63);
+padding: 60px 20px;
+text-align: center;
+}
+
+header h1 {
+font-size: 40px;
+}
+
+header p {
+color: #ccc;
+}
+
+
+section {
+padding: 60px 20px;
+text-align: center;
+}
+
+
+.job-cards {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.job {
+background: white;
+padding: 25px;
+width: 200px;
+border-radius: 12px;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.job:hover {
+transform: translateY(-5px);
+}
+
+.job-info {
+margin-top: 30px;
+font-size: 18px;
+color: #333;
+}
+
+
+.steps {
+display: flex;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.step {
+max-width: 200px;
+}
+
+.trust {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.trust div {
+background: white;
+padding: 20px;
+border-radius: 10px;
+}
+
+
+.cta {
+background: #111;
+color: white;
+padding: 50px;
+}
+
+button {
+padding: 12px 25px;
+border: none;
+background: #ff6f00;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+font-size: 16px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding: 5px 35px;
+background:#2d55a0;
+}
+.logo img{
+height:50px;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:#315dad;color:#012136;font-weight:700}
+
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="loboko/create/lobokot_transparent.png" alt="Logo"></div>
+  <nav> 
+    <a class="btn" href="index.html"><bouton>Accueil</bouton></a>
+  </nav>
+</header>
+
+<section class="header2">
+    <h1>LOBOKO</h1>
+    <p>La main qui vous fournit la bonne aide, au bon moment</p>
+</section>
+
+
+<section>
+    <h2>Des services essentiels, accessibles immédiatement</h2>
+
+    <div class="job-cards">
+        <div class="job" onclick="showJob('plumber')">Plombier</div>
+        <div class="job" onclick="showJob('locksmith')">Serrurier</div>
+        <div class="job" onclick="showJob('mechanic')">Mécanicien</div>
+        <div class="job" onclick="showJob('electrician')">Électricien</div>
+    </div>
+
+    <div id="jobInfo" class="job-info"></div>
+</section>
+
+
+<section>
+    <h2>Comment ça marche</h2>
+
+    <div class="steps">
+        <div class="step">
+            <h3>1</h3>
+            <p>Recherchez un service</p>
+        </div>
+
+        <div class="step">
+            <h3>2</h3>
+            <p>Choisissez un prestataire</p>
+        </div>
+
+        <div class="step">
+            <h3>3</h3>
+            <p>Intervention rapide</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Pourquoi Loboko ?</h2>
+
+    <div class="trust">
+        <div>✔ Prestataires vérifiés</div>
+        <div>✔ Paiement sécurisé</div>
+        <div>✔ Avis clients fiables</div>
+    </div>
+</section>
+
+
+<script>
+function showJob(type) {
+    let text = "";
+
+    if (type === "plumber") {
+        text = "Fuite d’eau ? Trouvez un plombier disponible immédiatement.";
+    }
+
+    if (type === "locksmith") {
+        text = "Porte bloquée ? Un serrurier peut intervenir rapidement.";
+    }
+
+    if (type === "mechanic") {
+        text = "Une panne ? Nos mécaniciens sont prêts.";
+    }
+
+    if (type === "electrician") {
+        text = "Problème électrique ? Contactez un expert.";
+    }
+
+    document.getElementById("jobInfo").innerText = text;
+}
+
+</script>
+
+</body>
+</html>

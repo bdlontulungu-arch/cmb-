@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>NEURO-STUD</title>
+
+<style>
+body {
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(to bottom, #ffffff, #9d16db);
+overflow-x: hidden;
+}
+
+.header2 {
+text-align: center;
+padding: 50px;
+}
+
+h1 {
+font-size: 40px;
+color: #000000;
+animation: fadeIn 2s;
+}
+
+.subtitle {
+color: #555;
+}
+
+/* Essaiefloat.... */
+.floating {
+position: absolute;
+font-size: 40px;
+animation: float 4s infinite ease-in-out;
+}
+
+.book-icon { top: 10%; left: 5%; }
+.pencil-icon { top: 20%; right: 10%; }
+.bag-icon { bottom: 10%; left: 10%; }
+
+
+.book {
+width: 200px;
+margin: 50px auto;
+padding: 20px;
+background: #fff;
+border-radius: 10px;
+cursor: pointer;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.hidden {
+display: none;
+}
+
+.content {
+text-align: center;
+animation: fadeIn 1s;
+}
+
+/* FONCTIONNALITEYYY */
+.features {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.feature {
+padding: 20px;
+background: #ffffff;
+border-radius: 15px;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature:hover {
+transform: scale(1.1);
+background: #e3f2fd;
+}
+
+/* Colabooo */
+.collab {
+text-align: center;
+margin: 60px;
+}
+
+.roles {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.role {
+padding: 20px;
+background: #ffffff;
+border-radius: 15px;
+cursor: pointer;
+transition: 0.3s;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.role:hover {
+transform: scale(1.1);
+background: #e3f2fd;
+}
+
+.role-content {
+margin-top: 30px;
+animation: fadeIn 0.5s;
+}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding: 5px 35px;
+background:#ce88fd;
+}
+.logo img{
+height:50px;
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;background:rgb(139, 95, 196);color:#ffffff;font-weight:700}
+
+/* ANIMATION YA YT */
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-15px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="floating book-icon">📚</div>
+<div class="floating pencil-icon">✏️</div>
+<div class="floating bag-icon">🎒</div>
+
+
+<header>
+  <div class="logo"><img src="loboko/create/logo_transparent.png" alt="Logo"></div>
+  <nav> 
+    <a class="btn" href="index.html"><bouton>Accueil</bouton></a>
+  </nav>
+</header>
+
+<section class="header2">
+    <h1>NEURO-STUD</h1>
+    <p class="subtitle">L’intelligence scolaire digitalisée</p>
+</section>
+
+
+<div class="book" onclick="openBook()">
+📖 Ouvrir le cahier
+</div>
+
+<div id="objectives" class="content hidden">
+    <h2>Objectifs</h2>
+    <p>✔ Digitalisation complète du système scolaire</p>
+    <p>✔ Centralisation des données</p>
+    <p>✔ Suivi des frais en temps réel</p>
+    <p>✔ Automatisation des bulletins</p>
+</div>
+
+<!-- FONCTIONNALITEYYY -->
+<section>
+    <h2 style="text-align:center;">Fonctionnalités</h2>
+
+    <div class="features">
+        <div class="feature" onclick="showInfo('data')">📊 Données</div>
+        <div class="feature" onclick="showInfo('fees')">💳 Frais ?</div>
+        <div class="feature" onclick="showInfo('report')">📄 Bulletins</div>
+        <div class="feature" onclick="showInfo('teacher')">👨🏽‍🏫 Prof</div>
+    </div>
+
+    <p id="info" style="text-align:center; margin-top:20px;"></p>
+</section>
+
+<!-- COLLABoooo -->
+<section class="collab">
+    <h2>Plateforme Collaborative</h2>
+    <p>Connecter élèves, parents et écoles en temps réel</p>
+
+    <div class="roles">
+
+        <div class="role" onclick="showRole('student')">
+             Élève
+        </div>
+
+        <div class="role" onclick="showRole('parent')">
+             Parent
+        </div>
+
+        <div class="role" onclick="showRole('school')">
+             École
+        </div>
+
+    </div>
+
+    <div id="roleContent" class="role-content"></div>
+</section>
+
+<script>
+function openBook() {
+    document.getElementById("objectives").classList.toggle("hidden");
+}
+
+function showInfo(type) {
+    let text = "";
+
+    if (type === "data") {
+        text = "Centralisation intelligente de toutes les données scolaires, fini les disparitions des dossiers.";
+    }
+    if (type === "fees") {
+        text = "Suivi automatisé des paiements et détection de fraude.";
+    }
+    if (type === "report") {
+        text = "Génération et accessibilité instantanée des bulletins scolaires.";
+    }
+    if (type === "teacher") {
+        text = "Gestion complète des enseignants et cours.";
+    }
+
+    document.getElementById("info").innerText = text;
+}
+
+function showRole(type) {
+    let content = "";
+
+    if (type === "student") {
+        content = `
+        <h3>🎓 Espace Élève</h3>
+        <p>📊 Notes en temps réel</p>
+        <p>📈 Suivi de progression</p>
+        <p>📚 Accès aux bulletins</p>
+        `;
+    }
+
+    if (type === "parent") {
+        content = `
+        <h3>👨‍👩‍👧 Espace Parent</h3>
+        <p>💬 Communication avec l'école</p>
+        <p>💳 Suivi des frais scolaires</p>
+        <p>🔔 Notifications importantes</p>
+        `;
+    }
+
+    if (type === "school") {
+        content = `
+        <h3>🏫 Espace École</h3>
+        <p>📝 Enregistrement des établissements</p>
+        <p>👨🏽‍🏫 Gestion des élèves et profs</p>
+        <p>📢 Diffusion d'annonces</p>
+        `;
+    }
+
+    document.getElementById("roleContent").innerHTML = content;
+}
+</script>
+
+</body>
+</html>
