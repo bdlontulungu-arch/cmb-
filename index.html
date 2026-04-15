@@ -27,9 +27,11 @@ img{
 max-width:100%;
 display:block
 }
+
+/*margin:0 auto;*/
 .container{
 max-width:1000px;
-margin:0 auto;
+margin:20px auto;
 padding:20px
 }
 
@@ -42,7 +44,7 @@ position:sticky;
       z-index:10
     }
     .nav{
-      display:flex;align-items:center;justify-content:space-between;height:70px}
+      display:flex;align-items:center;justify-content:space-between;height:70px; }
 
     .brand{display:flex;align-items:center;gap:10px;font-weight:800}
 
@@ -50,21 +52,25 @@ position:sticky;
 
     .nav ul{display:flex;gap:18px;list-style:none}
 
-    .btn{display:inline-block;
+    /*display:inline-block;*/
+    .btn{display:block;
+      text-align: center;
       padding:12px 18px;
       border-radius:10px;
       background:var(--primary);
-      color:#fff;font-weight:700}
+      color:#fff;font-weight:700
+    
+    }
 
     .btn.secondary{background:var(--secondary)}
 
-    .hero{background:linear-gradient(120deg,#e8f1ff,#f0fffb)}
+    .hero{background:linear-gradient(120deg,#e8f1ff,#f0fffb); text-align: center;}
 
     .hero-wrap{display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;padding:64px 0}
 
     .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin-bottom:12px}
 
-    .hero p{color:#374151;margin-bottom:20px}
+    .hero p{color:#374151;margin-bottom:20px; text-align: center;}
 
     .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
 
@@ -160,7 +166,7 @@ margin-right: 15px;
   <header>
     <div class="container nav">
      <div class="logo"> 
-    <img src="CMB/CmBLGO.jpeg" alt="Logo CMB">
+    <img src="IMG_5343.PNG" alt="Logo CMB">
   </div>
       <ul>
         <li><a href="#services"><strong>Plateformes</strong></a></li>
