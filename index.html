@@ -1,267 +1,295 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CMB corporation</title>
-<meta name="description" content="Nous contribuons à la transformation de la RDC en intégrant des solutions digitales innovantes et performantes." />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<style>
-:root{
---primary:#0a2fff;
---secondary:#637773;
---dark:#0b1320;
---light:#f5f7fb;
---muted:#6b7280;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:#111;background:#fff;line-height:1.6
-}
-a{
-text-decoration:none;
-color:inherit
-}
-
-img{
-max-width:100%;
-display:block
-}
-
-/*margin:0 auto;*/
-.container{
-max-width:1000px;
-margin:20px auto;
-padding:20px
-}
-
-
-header{
-position:sticky;
-      top:0;
-      background:#fff;
-      border-bottom:1px solid #e5e7eb;
-      z-index:10
-    }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;height:70px; }
-
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-
-    .brand span{color:var(--primary)}
-
-    .nav ul{display:flex;gap:18px;list-style:none}
-
-    /*display:inline-block;*/
-    .btn{display:block;
-      text-align: center;
-      padding:12px 18px;
-      border-radius:10px;
-      background:var(--primary);
-      color:#fff;font-weight:700
-    
-    }
-
-    .btn.secondary{background:var(--secondary)}
-
-    .hero{background:linear-gradient(120deg,#e8f1ff,#f0fffb); text-align: center;}
-
-    .hero-wrap{display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;padding:64px 0}
-
-    .hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin-bottom:12px}
-
-    .hero p{color:#374151;margin-bottom:20px; text-align: center;}
-
-    .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.04)}
-
-    section{padding:64px 0}
-
-    .section-title{font-size:28px;margin-bottom:12px}
-
-    .muted{color:var(--muted)}
-
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-
-    .service h3{margin:10px 0}
-
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-
-    .stat{background:#111827;border-radius:16px;padding:22px;text-align:center}
-
-    .stat strong{font-size:32px}
-
-    .cta{background:linear-gradient(120deg,#c17340,#56716c);color:#fff}
-
-    .cta .card{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
-
-    footer{background:#beb9b9;color:#3a3d48}
-
-    footer a{color:#4d4e54}
-
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
-
-    .btn2{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 20px;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:5px;
-}
-.blue-green{
-  background:linear-gradient(to right, #b88018,#0077b6,#18b85b);
-  color:white;
-  
-}
-.mauve{
- background:linear-gradient(to right, #9818b8,#9800b6,#b8189d);
-  color:white;
-}
-
-.bleu-mauve{
- background:linear-gradient(to right, #9818b8,#006db6,#b8189d);
-  color:white;
-}
-    @media(max-width:900px){
-      .hero-wrap{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr 1fr}
-      .footer-grid{grid-template-columns:1fr}
-      .nav ul{display:none}
-    }
-    .logo img{
-  height:70px;
-}
-.social-links {
-text-align: left;
-}
-
-.social-links p {
-font-size: 1.2em;
-margin-bottom: 20px;
-}
-
-.social-links a {
-display: inline-block;
-margin: 0 15px;
-text-decoration: none;
-font-size: 1.5em;
-transition: transform 0.3s, color 0.3s;
-}
-.social-links i{
-color: #333;
-}
-.social-links a:hover {
-transform: scale(1.3);
-color: #ff5733;
-}
-
-i {
-font-size: 25px;
-margin-right: 15px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMB Corporation - Solutions Tech</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-     <div class="logo"> 
-    <img src="IMG_5343.PNG" alt="Logo CMB">
-  </div>
-      <ul>
-        <li><a href="#services"><strong>Plateformes</strong></a></li>
-        <li><a href="#apropos"><strong>À propos</strong></a></li>
-        <li><a href="#contact"><strong>Contact</strong></a></li>
-      </ul>
-      <a class="btn" href="https://wa.me/243994094922" target="_blank">Besoin d'aide ?</a>
+  <header class="navbar">
+    <div>
+     <img src="imageee/CMBlogo.png" alt="CMB Corporation" class="logo"> 
     </div>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#loboco">Loboko</a>
+      <a href="#neurostude">Neuro-stud</a>
+      <a href="#cinfinity">C-infinity</a>
+      <a href="https://wa.me/243994094922" class="btni">Besoin d'aide ?</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div>
-          <h1>Promouvoir l'intégration des solutions digitales innovantes et performantes.</h1>
-          <p>L'ambition de la CMB Corporation dépasse la simple gestion de projets isolés.<br>
-             L'objectif final de notre organisation est d'ériger un véritable empire multisectoriel 
-             au coeur de la République Démocratique du Congo.</p>
-          <div style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="#services">Découvrir nos plateformes</a>
-          </div>
-        </div>
-       
-      </div>
-    </section>
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <h1>Technologies et innovations</h1>
+      <p>Nous contribuons à la transformation de la République démocratique du congo en intégrant des solutions digitales innovantes et performantes.</p>
+      <a href="#about" class="btn-primary">A propos de la CMB</a>
+    </div>
+    <div class="hero-bg">
+      <div class="particles"></div>
+    </div>
+  </section>
 
-    <section id="services">
-      <div class="container">
-        <h2 class="section-title">NOS PLATEFORMES</h2>
-        <div class="grid-3" style="margin-top:18px">
-          <div class="card service">
-            <span class="badge">
-                <img src="loboko/create/loboko.png" width="50px" >
-            </span>
-            <h3>Loboko</h3>
-            <p>Est une plateforme qui vous permet de trouver rapidement des professionnels qualifiés selon vos besoins.</p>
-             <a href="loboko.html" class="btn2 blue-green">Découvrir</a>
-          </div>
-          <div class="card service">
-            <span class="badge">
-                <img src="loboko/create/neuro.png" width="50px" >
-            </span>
-            <h3>Neuro-stud</h3>
-            <p>Est une plateforme de digitalisation scolaire pensée pour améliorer 
-                le suivi des élèves et moderniser la gestion des établissements éducatifs.</p>
-             <a href="neurostud.html" class="btn2 mauve">Découvrir</a>
-          </div>
-          <div class="card service">
-            <span class="badge">
-                 <img src="loboko/create/infinity.png" width="50px" >
-                </span>
-            <h3>C-Infinity</h3>
-            <p>Est une application dédiée aux mangas, bandes dessinées et romans créés par des auteurs africains.</p>
-             <a href="infinity.html" class="btn2 bleu-mauve">Découvrir</a>
-          </div>
+
+  <!-- LOBOkO - Style Service/Orange -->
+  <section id="loboco" class="platform loboco">
+    <div class="content" data-aos="fade-right" data-aos-duration="800">
+     <div class="tag-logo-wrapper">
+  <img src="imageee/lobokot_transparent.png" alt="Loboko Logo" class="loboko-logo">
+  <span class="tag tag-orange">Loboko</span>
+</div>
+      <h2>La bonne aide, au bon moment</h2>
+      <p class="platform-desc">
+        Le réseau social qui connecte clients et prestataires de services,<br>
+        Pour vous permettre de trouver rapidement des professionnels qualifiés selon vos besoins.
+      </p>
+      
+      <div class="stats-grid">
+        <div class="stat">
+          <h4>200+</h4>
+          <p>Prestataires actifs</p>
+        </div>
+        <div class="stat">
+          <h4>4.5/5</h4>
+          <p>Note moyenne</p>
+        </div>
+        <div class="stat">
+          <h4>24/7</h4>
+          <p>Disponible</p>
         </div>
       </div>
-    </section>
 
-   
-
-    <section id="apropos">
-      <div class="container">
-        <h2 class="section-title">À propos du CMB</h2>
-        <p class="muted">La CMB Corporation Sarl se positionne comme un acteur majeur de l'innovation et du développement multisectoriel en République Démocratique du Congo.<br>
-          Notre mission est d'apporter des solutions technologiques et structurelles aux défis quotidiens de la population tout en stimulant l'économie nationale.
-        </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4>Prestataires vérifiés</h4>
+          <p>Afin de vous fournir une meilleure expérience.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Accord direct</h4>
+          <p>Tarifs, horaires, détails : vous gérez tout directement avec le prestataire.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Avis clients fiables</h4>
+          <p>Des avis réels laissés après chaque intervention.</p>
+        </div>
       </div>
-    </section>
+      
+      <a href="https://loboko-app.vercel.app" class="btn-secondary btn-orange">Explorer Loboko →</a>
+    </div>
+   <div class="visual visual-loboco" data-aos="fade-left" data-aos-duration="800">
+  <div class="mockup">
+    <div class="provider-card">
+      <div class="provider-icon">🔧</div>
+      <div class="provider-info">
+        <h4>Moussa - Plombier</h4>
+        <p>2.3km • 4.9★ • Disponible maintenant</p>
+      </div>
+    </div>
 
+    <div class="provider-card">
+      <div class="provider-icon">💇‍♀️</div>
+      <div class="provider-info">
+        <h4>Eden - Coiffeuse</h4>
+        <p>0.8km • 5.0★ • Disponible dans 15min</p>
+      </div>
+    </div>
+
+    <div class="provider-card">
+      <div class="provider-icon">⚡</div>
+      <div class="provider-info">
+        <h4>Jean - Électricien</h4>
+        <p>1.5km • 4.7★ • Disponible demain</p>
+      </div>
+    </div>
+
+    <div class="provider-card">
+      <div class="provider-icon">✂️</div>
+      <div class="provider-info">
+        <h4>Nita - Couturière</h4>
+        <p>1.0km • 4.8★ • Disponible aujourd’hui</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <!-- NEUROSTUD - Style Éducation/Bleu-vert -->
+  <section id="neurostude" class="platform neurostude">
+    <div class="visual visual-neurostude" data-aos="fade-right" data-aos-duration="800">
+      <div class="mockup">
+        <div class="mockup-grade">Notes en temps réel</div>
+        <div class="mockup-grade">Gestion des élèves</div>
+        <div class="mockup-message">Communication avec l'école</div>
+      </div>
+    </div>
+    <div class="content" data-aos="fade-left" data-aos-duration="800">
+      <div class="tag-logo-wrapper">
+  <img src="imageee/logo_transparent.png" alt="Logo" class="badge-logo">
+  <span class="tag tag-green">Neuro-Stud</span>
+</div>
+      <h2>L'intelligence scolaire digitalisée</h2>
+      <p class="platform-desc">
+        Neuro-Stud est une plateforme de digitalisation scolaire pensée pour améliorer le suivi des élèves et moderniser la gestion des établissements éducatifs.
+      </p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4>📊 Tableau de Bord</h4>
+          <p>Suivez les notes et l'évolution de votre enfant en temps réel.</p>
+        </div>
+        <div class="feature-card">
+          <h4>💬Digitalisation</h4>
+          <p>Numérisation des données scolaires pour un classement rapide et sans papier.</p>
+        </div>
+        <div class="feature-card">
+          <h4>📅 Agenda Partagé</h4>
+          <p>Organisation des sorties, réunions, devoirs, absences synchronisés.</p>
+        </div>
+      </div>
+      
+      <a href="#" class="btn-secondary btn-green">Explorer Neuro-Stud →</a>
+    </div>
+  </section>
+
+  <!-- CINFINITY - Style Culture/Violet-rouge -->
+  <section id="cinfinity" class="platform cinfinity">
+    <div class="content" data-aos="fade-right" data-aos-duration="800">
+      
+      <div class="tag-logo-wrapper">
+  <img src="imageee/infinity_transparant.png" alt="Logo" class="badge-logo2">
+  <span class="tag tag-blue">CInfinity-ED</span>
+</div>
+      <h2>La BD africaine prend vie</h2>
+      <p class="platform-desc">
+        Dédiée à la distribution de bandes dessinées et 
+        récits africains,<br>C-infinity est un espace où les histoires locales deviennent des œuvres universelles.
+      </p>
+      
+      <div class="comic-grid">
+  <div class="comic-card">
+    <div class="comic-cover">
+      <img src="imageee/LEGENDE.jpeg" alt="Gardienne du Sahel">
+    </div>
+    <h4>Gardienne du Sahel</h4>
+    <p>Action • Aventure</p>
+  </div>
   
-  </main>
+  <div class="comic-card">
+    <div class="comic-cover">
+      <img src="imageee/WhatsApp Image 2026-05-16 at 08.57.56 (1).jpeg" alt="Nkolo">
+    </div>
+    <h4>Nkolo</h4>
+    <p>Fantasy • Tradition</p>
+  </div>
+  
+  <div class="comic-card">
+    <div class="comic-cover">
+      <img src="imageee/WhatsApp Image 2026-05-16 at 08.57.56.jpeg" alt="Aya">
+    </div>
+    <h4>Aya</h4>
+    <p>Comédie • Vie quotidienne</p>
+  </div>
+  <p class="platform-desc">
+    C-INFINITY ED ambitionne de structurer et valoriser la création artistique africaine en offrant aux auteurs un cadre sécurisé et une visibilité internationale.<br><br>
+<strong>“Nos histoires méritent d’être racontées, vues et protégées.”</strong>
+ </p>
+ 
+</div>
+      
+      <a href="#" class="btn-secondary btn-purple">Explorer Cinfinity →</a>
+    </div>
 
-  <footer id="contact">
+    <div class="visual visual-cinfinity" data-aos="fade-left" data-aos-duration="800">
+  <div class="comic-stack">
+    <div class="comic-item">
+      <img src="imageee/WhatsApp Image 2026-05-16 at 08.58.15.jpeg" alt="BD 1">
+    </div>
+    <div class="comic-item">
+      <img src="imageee/WhatsApp Image 2026-05-16 at 08.57.55 (1).jpeg" alt="BD 2">
+    </div>
+    <div class="comic-item">
+      <img src="imageee/last.jpeg" alt="BD 3">
+    </div>
+  </div>
+</div>
+  </section>
+
+
+
+ <!-- NOUVELLE SECTION À PROPOS -->
+  <section id="about" class="about">
+    <div class="about-content" data-aos="fade-up">
+      <h2>Qui sommes-nous ?</h2>
+      <p class="about-text">
+        La CMB Corporation Sarl se positionne conne un acteur majeur de l'innovation et du developpement multisectoriel en République Démocratique du congo.<br>
+        Notre mission est d'apporter des solutions technologiques et structurelles aux défis 
+        quotidiens de la population tout en stimulant l'économie nationale.
+      </p>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="icon">🚀</div>
+          <h3>Innovation</h3>
+          <p>Promouvoir l'intégration des solutions digitales innovantes et performantes.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="icon">🌍</div>
+          <h3>Impact Local</h3>
+          <p>Des solutions pensées pour et par l’Afrique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+   <footer id="contact">
     <div class="container footer-grid" style="padding:52px 0">
       <div>
-        <strong>Contacts<br>______________________<br>Visitez nos réseaux
-         </strong>
+       <p> <strong>Visitez nos réseaux</strong><br><br></p>
         <p class="muted"></p>
             <a class="social-links" href="https://www.facebook.com/profile.php?id=61585137428890" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
             <a class="social-links" href="https://www.instagram.com/cmb_corporation?igsh=MXVkNDQxempvenRjdg==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a class="social-links" href="https://x.com/CmbCorporation7"><i class="fa-brands fa-x-twitter"></i>
             <a class="social-links" href="https://whatsapp.com/channel/0029VbC0R6MJ93wclqt5JF23"> <i class="fa-brands fa-whatsapp"></i></a>
 
-        <ul style="list-style:none;margin-top:8px">
-          <li><a href="#services">Plateformes</a></li>
-        </ul>
       </div>
       <div>
      <strong>cmbcorporation3@gmail.com</strong>
         <p>Kinshasa, RDC <br><br></p>
-       <p> ©2026CMB, Tous droits reservés</p>
+       <p> 2026CMB, Tous droits reservés</p>
     
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> 
+    AOS.init({ once: true });
+     
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
